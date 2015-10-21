@@ -1,6 +1,5 @@
 #include "triangle.h"
 
-int add(int a, int b)
-{
-    return a + b;
+char *triangle(int a, int b, int c) {
+    // TODO
 }

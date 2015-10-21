@@ -1,6 +1,6 @@
 #ifndef TRIANGLE_H_
 #define TRIANGLE_H_
 
-int add(int a, int b);
+char *triangle(int a, int b, int c);
 
 #endif  // TRIANGLE_H_
