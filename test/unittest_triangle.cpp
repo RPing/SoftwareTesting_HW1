@@ -74,7 +74,7 @@ TEST(EdgeTest, WeakNormal) {
     EXPECT_STREQ("Scalene", triangle(2,199,200,test));
     EXPECT_STREQ("Scalene", triangle(199,2,200,test));
     EXPECT_STREQ("Scalene", triangle(199,200,2,test));
-    EXPECT_STREQ("Scalene", triangle(199,200,1,test));
+    EXPECT_STREQ("Not a triangle", triangle(199,200,1,test));
     EXPECT_STREQ("Not a triangle", triangle(1,1,2,test));
     EXPECT_STREQ("Not a triangle", triangle(1,1,8,test));
     EXPECT_STREQ("Not a triangle", triangle(1,199,200,test));
