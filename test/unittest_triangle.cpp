@@ -82,7 +82,14 @@ TEST(EdgeTest, WeakNormal) {
 
 // decision table-based test
 TEST(DecisionTableTest, DecisionTableTest) {
-    // TODO
+    EXPECT_STREQ("Not a triangle", triangle(3,1,2));
+    EXPECT_STREQ("Not a triangle", triangle(1,3,2));
+    EXPECT_STREQ("Not a triangle", triangle(1,2,3));
+    EXPECT_STREQ("Equilateral", triangle(4,4,4));
+    EXPECT_STREQ("Isosceles", triangle(198,198,199));
+    EXPECT_STREQ("Isosceles", triangle(198,199,198));
+    EXPECT_STREQ("Isosceles", triangle(199,198,198));
+    EXPECT_STREQ("Scalene", triangle(4,5,6));
 }
 
 int main(int argc, char **argv) {
