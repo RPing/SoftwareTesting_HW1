@@ -2,8 +2,8 @@
 #include "triangle.h"
 #include "gtest/gtest.h"
 
-// boundary value test
-TEST(BoundaryValueTest, NormalRobust) {
+// boundary value test(NR)
+TEST(TriangleProblem, BoundaryValueTest) {
     string test;
     EXPECT_STREQ("Out of range", triangle(50,50,0,test));
     EXPECT_STREQ("Isosceles", triangle(50,50,1,test));
@@ -28,8 +28,8 @@ TEST(BoundaryValueTest, NormalRobust) {
     EXPECT_STREQ("Out of range", triangle(201,50,50,test));
 }
 
-// equivalence class test
-TEST(EquivalenceClassTest, StrongRobust) {
+// equivalence class test(SR)
+TEST(TriangleProblem, EquivalenceClassTest) {
     string test;
     EXPECT_STREQ("Equilateral", triangle(50,50,50,test));
     EXPECT_STREQ("Isosceles", triangle(50,50,40,test));
@@ -60,8 +60,8 @@ TEST(EquivalenceClassTest, StrongRobust) {
     EXPECT_STREQ("Out of range", triangle(201,201,201,test));
 }
 
-// edge test
-TEST(EdgeTest, WeakNormal) {
+// edge test(WN)
+TEST(TriangleProblem, EdgeTest) {
     string test;
     EXPECT_STREQ("Equilateral", triangle(1,1,1,test));
     EXPECT_STREQ("Equilateral", triangle(200,200,200,test));
@@ -84,7 +84,7 @@ TEST(EdgeTest, WeakNormal) {
 }
 
 // decision table-based test
-TEST(DecisionTableTest, DecisionTableTest) {
+TEST(TriangleProblem, DecisionTableTest) {
     string test;
     EXPECT_STREQ("Not a triangle", triangle(3,1,2,test));
     EXPECT_STREQ("Not a triangle", triangle(1,3,2,test));
