@@ -70,7 +70,19 @@ TEST(NextDateProblem, EdgeTest) {
 // decision table-based test
 TEST(TriangleProblem, DecisionTableTest) {
     string test;
-
+    EXPECT_STREQ("2003/6/16", nextdate(2003,6,15,test));
+    EXPECT_STREQ("2003/7/1", nextdate(2003,6,30,test));
+    EXPECT_STREQ("Invalid input date", nextdate(2003,6,31,test));
+    EXPECT_STREQ("2003/1/16", nextdate(2003,1,15,test));
+    EXPECT_STREQ("2003/2/1", nextdate(2003,1,31,test));
+    EXPECT_STREQ("2003/12/16", nextdate(2003,12,15,test));
+    EXPECT_STREQ("2004/1/1", nextdate(2003,12,31,test));
+    EXPECT_STREQ("2003/2/16", nextdate(2003,2,15,test));
+    EXPECT_STREQ("2003/3/1", nextdate(2003,2,28,test));
+    EXPECT_STREQ("Invalid input date", nextdate(2003,2,29,test));
+    EXPECT_STREQ("Invalid input date", nextdate(2003,2,30,test));
+    EXPECT_STREQ("2004/2/29", nextdate(2004,2,28,test));
+    EXPECT_STREQ("2004/3/1", nextdate(2004,2,29,test));
 }
 
 int main(int argc, char **argv) {
