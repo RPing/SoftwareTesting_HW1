@@ -2,21 +2,27 @@
 #include "triangle.h"
 #include "gtest/gtest.h"
 
-// boundary value test(Normal)
+// boundary value test(Robust)
 TEST(NextDateProblem, BoundaryValueTest) {
     string test;
+    EXPECT_STREQ("Invalid date range", nextdate(1811,6,10,test));
     EXPECT_STREQ("1812/6/11", nextdate(1812,6,10,test));
     EXPECT_STREQ("1813/6/11", nextdate(1813,6,10,test));
     EXPECT_STREQ("2011/6/11", nextdate(2011,6,10,test));
     EXPECT_STREQ("2012/6/11", nextdate(2012,6,10,test));
+    EXPECT_STREQ("Invalid date range", nextdate(2013,6,10,test));
+    EXPECT_STREQ("Invalid date range", nextdate(2000,0,10,test));
     EXPECT_STREQ("2000/1/11", nextdate(2000,1,10,test));
     EXPECT_STREQ("2000/2/11", nextdate(2000,2,10,test));
     EXPECT_STREQ("2000/11/11", nextdate(2000,11,10,test));
     EXPECT_STREQ("2000/12/11", nextdate(2000,12,10,test));
+    EXPECT_STREQ("Invalid date range", nextdate(2000,13,10,test));
+    EXPECT_STREQ("Invalid date range", nextdate(2000,2,0,test));
     EXPECT_STREQ("2000/2/2", nextdate(2000,2,1,test));
     EXPECT_STREQ("2000/2/3", nextdate(2000,2,2,test));
     EXPECT_STREQ("Invalid input date", nextdate(2000,2,30,test));
     EXPECT_STREQ("Invalid input date", nextdate(2000,2,31,test));
+    EXPECT_STREQ("Invalid date range", nextdate(2000,2,32,test));
 }
 
 // equivalence class test(StrongNormal)
