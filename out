@@ -1,0 +1,16 @@
+[==========] Running 4 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 4 tests from CommissionProblem
+[ RUN      ] CommissionProblem.BoundaryValueTest
+[       OK ] CommissionProblem.BoundaryValueTest (0 ms)
+[ RUN      ] CommissionProblem.EquivalenceClassTest
+[       OK ] CommissionProblem.EquivalenceClassTest (0 ms)
+[ RUN      ] CommissionProblem.EdgeTest
+[       OK ] CommissionProblem.EdgeTest (0 ms)
+[ RUN      ] CommissionProblem.DecisionTableTest
+[       OK ] CommissionProblem.DecisionTableTest (0 ms)
+[----------] 4 tests from CommissionProblem (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 1 test case ran. (1 ms total)
+[  PASSED  ] 4 tests.
