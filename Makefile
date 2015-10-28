@@ -18,6 +18,7 @@ unittest_triangle.o: test/unittest_triangle.cpp include/triangle.h
 unittest_nextdate.o: test/unittest_nextdate.cpp include/nextdate.h
 	$(CXX) $(CXXFLAGS) -c $<
 unittest_commission.o: test/unittest_commission.cpp include/commission.h
+	$(CXX) $(CXXFLAGS) -c $<
 
 triangle.o: src/triangle.cpp include/triangle.h
 	$(CXX) $(CXXFLAGS) -c $<
