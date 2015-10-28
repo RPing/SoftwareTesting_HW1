@@ -1,0 +1,16 @@
+[==========] Running 4 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 4 tests from NextDateProblem
+[ RUN      ] NextDateProblem.BoundaryValueTest
+[       OK ] NextDateProblem.BoundaryValueTest (0 ms)
+[ RUN      ] NextDateProblem.EquivalenceClassTest
+[       OK ] NextDateProblem.EquivalenceClassTest (0 ms)
+[ RUN      ] NextDateProblem.EdgeTest
+[       OK ] NextDateProblem.EdgeTest (0 ms)
+[ RUN      ] NextDateProblem.DecisionTableTest
+[       OK ] NextDateProblem.DecisionTableTest (0 ms)
+[----------] 4 tests from NextDateProblem (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 1 test case ran. (1 ms total)
+[  PASSED  ] 4 tests.

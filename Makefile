@@ -1,7 +1,7 @@
 CXX=g++
 GTEST_DIR=gtest
 G_INCLUDE=${GTEST_DIR}/include
-CXXFLAGS=-I include -I ${G_INCLUDE} -g -Wall -Wextra -pthread
+CXXFLAGS=-std=c++11 -I include -I ${G_INCLUDE} -g -Wall -Wextra -pthread
 
 
 all: unittest_triangle unittest_nextdate

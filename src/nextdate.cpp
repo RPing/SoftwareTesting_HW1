@@ -1,4 +1,5 @@
 #include "nextdate.h"
+#include <iostream>
 
 void format_string(int year, int month, int day, string &str) {
     str = to_string(year) + "/" + to_string(month) + "/" + to_string(day);
@@ -7,7 +8,7 @@ void format_string(int year, int month, int day, string &str) {
 bool IsLeapYear(int year) {
     if (year % 400 == 0) {
         return true;
-    } else if ((year % 4 == 0) || (year % 100 != 0)) {
+    } else if ((year % 4 == 0) && (year % 100 != 0)) {
         return true;
     } else {
         return false;

@@ -1,5 +1,5 @@
 #include <limits.h>
-#include "triangle.h"
+#include "nextdate.h"
 #include "gtest/gtest.h"
 
 // boundary value test(Robust)
@@ -74,7 +74,7 @@ TEST(NextDateProblem, EdgeTest) {
 }
 
 // decision table-based test
-TEST(TriangleProblem, DecisionTableTest) {
+TEST(NextDateProblem, DecisionTableTest) {
     string test;
     EXPECT_STREQ("2003/6/16", nextdate(2003,6,15,test));
     EXPECT_STREQ("2003/7/1", nextdate(2003,6,30,test));
